@@ -1,0 +1,100 @@
+﻿<Window x:Class="Lab_15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TabControl HorizontalAlignment="Center" Height="352" Margin="0,10,0,0" VerticalAlignment="Top" Width="709" Background="#FFE5E5E5" >
+            <TabItem Header="Task 1" >
+                <Grid Background="#FFF">
+                    <Label Content="a =" HorizontalAlignment="Left" Height="25" Margin="23,43,0,0" VerticalAlignment="Top" Width="30"/>
+                    <Label Content="b =" HorizontalAlignment="Left" Height="25" Margin="23,74,0,0" VerticalAlignment="Top" Width="30"/>
+                    <Label Content="c =" HorizontalAlignment="Left" Height="25" Margin="23,108,0,0" VerticalAlignment="Top" Width="30"/>
+                    <Label Content="Result =" HorizontalAlignment="Left" Height="25" Margin="23,138,0,0" VerticalAlignment="Top" Width="64"/>
+                    <TextBox x:Name="var_a" HorizontalAlignment="Left" Height="17" Margin="122,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62"  />
+                    <TextBox x:Name="var_b" HorizontalAlignment="Left" Height="19" Margin="122,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62"/>
+                    <TextBox x:Name="var_c" HorizontalAlignment="Left" Height="17" Margin="122,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="White"/>
+                    <Button x:Name="btn_result" Content="Розрахувати" HorizontalAlignment="Left" Height="20" Margin="23,189,0,0" VerticalAlignment="Top" Width="162" IsCancel="True" Click="btn_result_Click"/>
+                    <TextBox x:Name="result_var" HorizontalAlignment="Left" Height="21" Margin="120,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" Background="#FFFAECB5" BorderBrush="White"/>
+                    <Image HorizontalAlignment="Left" Height="73" Margin="352,90,0,0" VerticalAlignment="Top" Width="282" Source="/Image1.png"/>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Task 2">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Години:" HorizontalAlignment="Left" Height="26" Margin="39,67,0,0" VerticalAlignment="Top" Width="73" Background="White"/>
+                    <Label Content="Хвилини:" HorizontalAlignment="Left" Height="26" Margin="39,113,0,0" VerticalAlignment="Top" Width="73" Background="White"/>
+                    <Label Content="Секунди:" HorizontalAlignment="Left" Height="26" Margin="39,162,0,0" VerticalAlignment="Top" Width="73" Background="White"/>
+                    <TextBox x:Name="txt_hours" HorizontalAlignment="Left" Height="26" Margin="145,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Background="White"/>
+                    <TextBox x:Name="txt_minutes" HorizontalAlignment="Left" Height="26" Margin="145,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Background="White"/>
+                    <TextBox x:Name="txt_seconds" HorizontalAlignment="Left" Height="26" Margin="145,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Background="White"/>
+                    <Button x:Name="btn_result1" Content="Обрахувати" HorizontalAlignment="Left" Height="36" Margin="38,211,0,0" VerticalAlignment="Top" Width="228" Background="#FFFBF886" Click="btn_result1_Click"/>
+                    <TextBox x:Name="txt_result_box1" HorizontalAlignment="Left" Height="26" Margin="450,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"  Background="#FFE5E5E5" BorderBrush="#00000000" FontSize="16"/>
+                    <Label Content="Поточний час:" HorizontalAlignment="Left" Height="26" Margin="303,67,0,0" VerticalAlignment="Top" Width="111" Background="White"/>
+                    <TextBox x:Name="txt_result_box2" HorizontalAlignment="Left" Height="26" Margin="450,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"  Background="#FFC6C6C6" FontSize="14"/>
+                    <Label Content="Обрахований час:" HorizontalAlignment="Left" Height="26" Margin="303,113,0,0" VerticalAlignment="Top" Width="111" Background="White"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Task 3" >
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Введіть число:" HorizontalAlignment="Left" Height="28" Margin="114,91,0,0" VerticalAlignment="Top" Width="176" Background="White"/>
+                    <TextBox x:Name="num_txt" HorizontalAlignment="Left" Height="28" Margin="320,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Background="#FFB8B8B8" BorderBrush="#FFB8B8B8"/>
+                    <Button x:Name="num_btn" Content="Обрахувати" HorizontalAlignment="Left" Height="26" Margin="114,136,0,0" VerticalAlignment="Top" Width="176" Background="#FFFFF598" Click="num_btn_Click"/>
+                    <TextBox x:Name="num_txt_res" HorizontalAlignment="Left" Height="28" Margin="320,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Background="#FFE5E5E5" BorderBrush="#FFE5E5E5"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Task 4" >
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Введіть номер дня:" HorizontalAlignment="Left" Height="26" Margin="175,101,0,0" VerticalAlignment="Top" Width="142" Background="White"/>
+                    <TextBox x:Name="num_txt_day" HorizontalAlignment="Left" Height="26" Margin="340,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" />
+                    <Button x:Name="num_btn_day" Content="Обрахувати " HorizontalAlignment="Left" Height="27" Margin="175,147,0,0" VerticalAlignment="Top" Width="142" Background="#FFEBB69D" Click="num_btn_day_Click"/>
+                    <TextBox x:Name="txt_day_res1" HorizontalAlignment="Left" Height="27" Margin="340,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Background="#FFE5E5E5" BorderBrush="#FFE5E5E5"/>
+                    <TextBox x:Name="txt_day_res2" HorizontalAlignment="Left" Height="27" Margin="340,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Background="#FFE5E5E5" BorderBrush="#FFE5E5E5"/>
+                    <TextBox x:Name="txt_day_res3" HorizontalAlignment="Left" Height="27" Margin="340,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Background="#FFE5E5E5" BorderBrush="#FFE5E5E5"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Task 5" >
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Введіть число: " HorizontalAlignment="Left" Height="28" Margin="201,109,0,0" VerticalAlignment="Top" Width="138" Background="White"/>
+                    <TextBox x:Name="num_txt_digit" HorizontalAlignment="Left" Height="28" Margin="363,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Background="#FFCAC6C6" BorderBrush="#FFE5E5E5"/>
+                    <Button x:Name="num_btn_digit" Content="Обрахувати" HorizontalAlignment="Left" Height="28" Margin="201,153,0,0" VerticalAlignment="Top" Width="138" Background="#FF869BD4" Click="num_btn_digit_Click"/>
+                    <TextBox x:Name="num_txt_digit1" HorizontalAlignment="Left" Height="28" Margin="363,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Background="#FFE5E5E5" BorderBrush="#FFE5E5E5"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Task 6" >
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Введіть (через кому) елементи масиву:" HorizontalAlignment="Left" Height="27" Margin="112,87,0,0" VerticalAlignment="Top" Width="230" Background="White"/>
+                    <TextBox x:Name="array_txt" HorizontalAlignment="Left" Height="27" Margin="373,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Background="#FFCECACA" BorderBrush="#FFE5E5E5"/>
+                    <Button x:Name="array_btn" Content="Обрахувати" HorizontalAlignment="Left" Margin="112,142,0,0" VerticalAlignment="Top" Height="29" Width="230" Background="#FFEE72D2" Click="array_btn_Click"/>
+                    <TextBox x:Name="array_res" HorizontalAlignment="Left" Height="29" Margin="373,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Background="#FFE5E5E5" BorderBrush="#FFE5E5E5"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Task 7">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Введіть ваш рядок:" HorizontalAlignment="Left" Height="29" Margin="72,107,0,0" VerticalAlignment="Top" Width="197" Background="White"/>
+                    <TextBox x:Name="word_count_txt" HorizontalAlignment="Left" Height="29" Margin="301,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Background="#FFC1C1C1" BorderBrush="#FFE5E5E5"/>
+                    <Button x:Name="word_count_btn" Content="Обрахувати" HorizontalAlignment="Left" Height="30" Margin="72,162,0,0" VerticalAlignment="Top" Width="197" Background="#FFA985E2" Click="word_count_btn_Click"/>
+                    <TextBox x:Name="word_count_res" HorizontalAlignment="Left" Height="30" Margin="301,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346" Background="#FFE5E5E5" BorderBrush="#FFE5E5E5"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+</Window>
